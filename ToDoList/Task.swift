@@ -9,26 +9,23 @@
 import Foundation
 
 struct Task {
-    let description: String
-    let timestamp: Int
+    let title: String
+    let dueDate: Int
 }
 
 struct TaskInputsValidator {
     
-    func isDescriptionValid(description: String) -> Bool {
+    func isTitleValid(title: String) -> Bool {
         
-        if description == "" {
+        if title == "" {
             return false
         }
         
         return true
     }
     
-    func isDateValid(timestamp: Int) -> Bool {
-        if timestamp > 0 {
-            return true
-        }
-        return false
+    func isDateValid(dueDate: Int) -> Bool {
+        return true
     }
     
 }

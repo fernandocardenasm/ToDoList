@@ -15,7 +15,7 @@
 		EDD16D3B20C6943800938DB0 /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D3A20C6943800938DB0 /* ToDoListTests.swift */; };
 		EDD16D4620C6944C00938DB0 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D4520C6944C00938DB0 /* TaskTests.swift */; };
 		EDD16D4820C694B200938DB0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D4720C694B200938DB0 /* Task.swift */; };
-		EDD16D4A20C698AC00938DB0 /* TaskValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D4920C698AC00938DB0 /* TaskValidator.swift */; };
+		EDD16D4C20C6C08900938DB0 /* TaskValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D4920C698AC00938DB0 /* TaskValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		EDD16D3C20C6943800938DB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDD16D4520C6944C00938DB0 /* TaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
 		EDD16D4720C694B200938DB0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		EDD16D4920C698AC00938DB0 /* TaskValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskValidator.swift; sourceTree = "<group>"; };
+		EDD16D4920C698AC00938DB0 /* TaskValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 				EDD16D3A20C6943800938DB0 /* ToDoListTests.swift */,
 				EDD16D3C20C6943800938DB0 /* Info.plist */,
 				EDD16D4520C6944C00938DB0 /* TaskTests.swift */,
-				EDD16D4920C698AC00938DB0 /* TaskValidator.swift */,
+				EDD16D4920C698AC00938DB0 /* TaskValidatorTests.swift */,
 			);
 			path = ToDoListTests;
 			sourceTree = "<group>";
@@ -218,7 +218,7 @@
 			files = (
 				EDD16D4620C6944C00938DB0 /* TaskTests.swift in Sources */,
 				EDD16D3B20C6943800938DB0 /* ToDoListTests.swift in Sources */,
-				EDD16D4A20C698AC00938DB0 /* TaskValidator.swift in Sources */,
+				EDD16D4C20C6C08900938DB0 /* TaskValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
