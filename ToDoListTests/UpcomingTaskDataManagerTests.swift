@@ -12,37 +12,37 @@ import XCTest
 
 class UpcomingTaskDataManagerTests: XCTestCase {
     
-    var upcomingTaskDataManager: UpcomingTaskDataManager!
+    var sut: UpcomingTaskDataManager!
     
     override func setUp() {
         super.setUp()
         
-        upcomingTaskDataManager = UpcomingTaskDataManager()
+        sut = UpcomingTaskDataManager()
         
     }
     
     func testAdd_WithSection_IncreasesNumberOfSectionsByOne(){
         
-        let numberOfSections = upcomingTaskDataManager?.numberOfSections()
+        let numberOfSections = sut.numberOfSections()
         
-        upcomingTaskDataManager?.add(section: Section<Task>(title: "Hola", items: []))
+        sut.add(section: Section<Task>(title: "Hola", items: []))
         
-        XCTAssertEqual(numberOfSections! + 1, upcomingTaskDataManager?.numberOfSections())
+        XCTAssertEqual(numberOfSections + 1, sut.numberOfSections())
         
     }
     
     func testRemove_WithIndexZero_DecreasesNumberOfSectionsByOne(){
-        let numberOfSections = upcomingTaskDataManager?.numberOfSections()
+        let numberOfSections = sut.numberOfSections()
         
-        upcomingTaskDataManager?.remove(at: 0)
+        sut.remove(at: 0)
         
-        XCTAssertEqual(numberOfSections! - 1, upcomingTaskDataManager?.numberOfSections())
+        XCTAssertEqual(numberOfSections - 1, sut.numberOfSections())
         
     }
     
     override func tearDown() {
         
-        upcomingTaskDataManager = nil
+        sut = nil
         
         super.tearDown()
     }

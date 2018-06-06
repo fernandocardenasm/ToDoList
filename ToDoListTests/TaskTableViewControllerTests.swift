@@ -12,32 +12,32 @@ import XCTest
 
 class TaskTableViewControllerTests: XCTestCase {
     
-    var controller: TaskTableViewController!
+    var sut: TaskTableViewController!
         
     override func setUp() {
         super.setUp()
-        controller = TaskTableViewController(style: .plain)
-        controller.loadViewIfNeeded()
+        sut = TaskTableViewController(style: .plain)
+        sut.loadViewIfNeeded()
         
     }
     
     func testLoadingViewUpcomingTaskDataManagerIsNotNil() {
-        XCTAssertNotNil(controller.upcomingTaskDataManager)
+        XCTAssertNotNil(sut.upcomingTaskDataManager)
     }
     
     func testLoadingView_SetsTableViewDataSource(){
         
-        XCTAssertTrue(controller.tableView.dataSource is UpcomingTaskDataManagerTableViewAdapter)
+        XCTAssertTrue(sut.tableView.dataSource is UpcomingTaskDataManagerTableViewAdapter)
     }
     
     func testLoadingView_SetsTableViewDelegate(){
-        XCTAssertTrue(controller.tableView.delegate is UpcomingTaskDataManagerTableViewAdapter)
+        XCTAssertTrue(sut.tableView.delegate is UpcomingTaskDataManagerTableViewAdapter)
     }
     
     
     override func tearDown() {
         
-        controller = nil
+        sut = nil
         
         super.tearDown()
     }
