@@ -26,7 +26,7 @@ class TaskValidator: XCTestCase {
         
         let title = ""
         
-        XCTAssertEqual(validator.isTitleValid(title: title), false)
+        XCTAssertFalse(validator.isTitleValid(title: title))
         
     }
     
@@ -34,14 +34,14 @@ class TaskValidator: XCTestCase {
         
         let title = "Hola"
         
-        XCTAssertEqual(validator.isTitleValid(title: title), true)
+        XCTAssertTrue(validator.isTitleValid(title: title))
         
     }
     
     func testIsTimestampValid_WithSomeDate_ReturnsTrue() {
         let dueDate = 1234
         
-        XCTAssertEqual(validator.isDateValid(dueDate: dueDate), true)
+        XCTAssertTrue(validator.isDateValid(dueDate: dueDate))
     }
     
     
