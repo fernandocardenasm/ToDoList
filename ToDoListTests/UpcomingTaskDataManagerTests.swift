@@ -34,7 +34,7 @@ class UpcomingTaskDataManagerTests: XCTestCase {
     func testRemove_WithIndexZero_DecreasesNumberOfSectionsByOne(){
         let numberOfSections = sut.numberOfSections()
         
-        sut.remove(at: 0)
+        sut.removeSection(at: 0)
         
         XCTAssertEqual(numberOfSections - 1, sut.numberOfSections())
         

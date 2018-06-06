@@ -21,9 +21,14 @@ class UpcomingTaskDataManager {
         sections[index].items.append(task)
     }
     
-    func remove(at index: Int) {
+    func removeSection(at index: Int) {
         sections.remove(at: index)
     }
+    
+    func removeTask(at indexTask: Int, inSection indexSection: Int) {
+        sections[indexSection].items.remove(at: indexTask)
+    }
+    
     
     func numberOfSections() -> Int {
         return sections.count

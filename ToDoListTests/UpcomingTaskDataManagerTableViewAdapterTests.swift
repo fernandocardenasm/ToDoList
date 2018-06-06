@@ -33,7 +33,7 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
         
     }
     
-    func testNumberOfRows_InSectionZero_IsNumberOfTasksInSection(){
+    func testNumberOfRows_InSectionZeroAndTaskAdded_IsNumberOfTasksInSection(){
         
         
         var numberOfTasksInSectionZero = sut.upcomingTaskDataManager.numberOfTasks(inSection: 0)
@@ -41,6 +41,23 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), numberOfTasksInSectionZero)
         
         sut.upcomingTaskDataManager.add(task: Task(title: "Lo mejor", dueDate: 123456), inSection: 0)
+        
+        numberOfTasksInSectionZero = sut.upcomingTaskDataManager.numberOfTasks(inSection: 0)
+        
+        tableView.reloadData()
+        
+        XCTAssertEqual(tableView.numberOfRows(inSection: 0), numberOfTasksInSectionZero)
+        
+    }
+    
+    func testNumberOfRows_InSectionZeroAndTaskZeroRemoved_IsNumberOfTasksInSection(){
+        
+        
+        var numberOfTasksInSectionZero = sut.upcomingTaskDataManager.numberOfTasks(inSection: 0)
+        
+        XCTAssertEqual(tableView.numberOfRows(inSection: 0), numberOfTasksInSectionZero)
+        
+        sut.upcomingTaskDataManager.removeTask(at: 0, inSection: 0)
         
         numberOfTasksInSectionZero = sut.upcomingTaskDataManager.numberOfTasks(inSection: 0)
         
