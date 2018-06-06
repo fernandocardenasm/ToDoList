@@ -50,7 +50,7 @@ class UpcomingTaskDataManagerTableViewAdapter: NSObject {
 extension UpcomingTaskDataManagerTableViewAdapter: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+
         return upcomingTaskDataManager.numberOfTasks(inSection: section)
 
     }
@@ -62,7 +62,12 @@ extension UpcomingTaskDataManagerTableViewAdapter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TaskCell.self), for: indexPath) as! TaskCell
+        
+        if cell is TaskCell {
+            print(indexPath)
+        }
         
         return cell
     }
@@ -78,6 +83,10 @@ extension UpcomingTaskDataManagerTableViewAdapter: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+}
+
+class ACell: UITableViewCell {
+    
 }
 
 

@@ -37,8 +37,9 @@ class UpcomingTaskDataManagerTests: XCTestCase {
         sut.removeSection(at: 0)
         
         XCTAssertEqual(numberOfSections - 1, sut.numberOfSections())
-        
     }
+    
+    
     
     override func tearDown() {
         
