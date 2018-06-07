@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ToDoListTests/UpcomingTaskDataManagerTableViewAdapterTests.swift"
-            timestampString = "550070540.924859"
+            timestampString = "550077581.240757"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "testCellForRow_CallsConfigCell()"
             landmarkType = "7">
          </BreakpointContent>

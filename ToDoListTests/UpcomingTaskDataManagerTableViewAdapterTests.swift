@@ -29,6 +29,7 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
         sut = UpcomingTaskDataManagerTableViewAdapter(upcomingTaskDataManager: UpcomingTaskDataManager())
         tableView = UITableView()
         tableView?.dataSource = sut
+        tableView.delegate = sut
         sut.upcomingTaskDataManager.removeAllSections()
         sut.upcomingTaskDataManager.add(section: section)
         
@@ -37,6 +38,7 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
 
     }
     
+    //Datasource
     func testNumberOfSections_IsNumberOfSections(){
         
         let numberOfSections = sut.upcomingTaskDataManager.numberOfSections()
@@ -77,13 +79,13 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
     func testCellForRow_AtZero_ReturnsTaskCell() {
         
         let mockTableView = MockTableView.mockTableView(withDataSource: sut)
-        
+
         //The reloadData is necessary so the cellForRow at Indexpath does not return nil
         mockTableView.reloadData()
 
         //The ideal way returns nil for an unknown reason
         let cell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
-        
+
         XCTAssertTrue(cell is TaskCell)
         
     }
@@ -116,11 +118,34 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
         
     }
     
-//    func test_TitleForHeaderInSection_WithSectionZero_IsTitleOfSection() {
-//
-//        let title = sut.upcomingTaskDataManager.titleOfSection(at: 0)
-//
-//    }
+    func test_TitleForHeaderInSection_WithSectionZero_IsTitleOfSection() {
+        
+        let titleSection = sut.upcomingTaskDataManager.titleOfSection(at: 0)
+        
+        let cellTitle = sut.tableView(tableView, titleForHeaderInSection: 0)
+        
+        XCTAssertEqual(titleSection, cellTitle)
+        
+    }
+    
+    //Delegate
+    
+    func testDeleteButton_InSectionZero_ShowsTitleCheck(){
+
+        let deleteButtonTitle = sut.tableView(tableView, titleForDeleteConfirmationButtonForRowAt: IndexPath(row: 0, section: 0))
+        
+        XCTAssertEqual(deleteButtonTitle, "Delete")
+        
+    }
+    
+    func testDeletingAnItem_DeletesItInTheUpdatingTaskDataManager() {
+        
+        sut.tableView(tableView, commit: .delete, forRowAt: IndexPath(row: 0, section: 0))
+        
+        XCTAssertEqual(sut.upcomingTaskDataManager.numberOfTasks(inSection: 0), 0)
+        XCTAssertEqual(tableView.numberOfRows(inSection: 0), 0)
+        
+    }
     
     override func tearDown() {
         
@@ -152,7 +177,6 @@ extension UpcomingTaskDataManagerTableViewAdapterTests {
             return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
             
         }
-        
     }
     
     class MockTableViewCell: TaskCell {

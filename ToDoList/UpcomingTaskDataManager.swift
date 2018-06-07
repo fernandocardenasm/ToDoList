@@ -7,13 +7,13 @@
 //
 
 class UpcomingTaskDataManager {
-//    private var sections: [Section<Task>] = [
-//                    Section<Task>(title: "To do soon", items: [Task(title: "First Task", dueDate: 1), Task(title: "Second Task", dueDate: 12345)]),
-//                    Section<Task>(title: "Soon", items: [Task(title: "Second Task", dueDate: 2)]),
-//                    Section<Task>(title: "More future", items: [Task(title: "Third Task", dueDate: 3)])
-//                    ]
+    private var sections: [Section<Task>] = [
+                    Section<Task>(title: "To do soon", items: [Task(title: "First Task", dueDate: 1), Task(title: "Second Task", dueDate: 12345)]),
+                    Section<Task>(title: "Soon", items: [Task(title: "Second Task", dueDate: 2)]),
+                    Section<Task>(title: "More future", items: [Task(title: "Third Task", dueDate: 3)])
+                    ]
     
-    private var sections: [Section<Task>] = []
+//    private var sections: [Section<Task>] = []
     
     func add(section: Section<Task>) {
         sections.append(section)
