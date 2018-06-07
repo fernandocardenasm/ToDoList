@@ -28,7 +28,8 @@ extension TaskTableViewAdapter: UITableViewDataSource {
         
         let task = taskDataManager.task(at: indexPath.row, inSection: indexPath.section)
         
-        cell.configCell(with: task)
+//        cell.configCell(with: task)
+        cell.viewModel = TaskCell.ViewModel(task: task)
         
         return cell
     }

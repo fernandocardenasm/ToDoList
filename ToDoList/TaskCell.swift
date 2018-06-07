@@ -33,6 +33,16 @@ class TaskCell: UITableViewCell {
         return label
     }()
     
+    
+    var viewModel: ViewModel? {
+        didSet {
+            if let viewModel = viewModel {
+                titleLabel.text = viewModel.title
+                dueDateLabel.text = viewModel.dueDate
+            }
+        }
+    }
+    
     func configCell(with task: Task){
         
     }
@@ -57,4 +67,19 @@ class TaskCell: UITableViewCell {
         
     }
     
+}
+
+extension TaskCell {
+    struct ViewModel: Equatable {
+        let title: String
+        let dueDate: String
+        
+    }
+}
+
+extension TaskCell.ViewModel {
+    init(task: Task) {
+        title = task.title
+        dueDate = "\(task.dueDate)"
+    }
 }

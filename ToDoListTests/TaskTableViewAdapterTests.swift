@@ -103,7 +103,7 @@ class TaskTableViewAdapterTests: XCTestCase {
         
     }
     
-    func testCellForRow_CallsConfigCell() {
+    func testCellForRow_SetsViewModel() {
         let mockTableView = MockTableView.mockTableView(withDataSource: sut)
         
         sut.taskDataManager.add(section: section)
@@ -111,9 +111,9 @@ class TaskTableViewAdapterTests: XCTestCase {
         
         let cell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! MockTableViewCell
         
-        guard let catchedTask = cell.catchedTask else { return }
+        guard let catchedViewModel = cell.viewModel else { return }
         
-        XCTAssertEqual(catchedTask, task)
+        XCTAssertEqual(catchedViewModel, TaskCell.ViewModel(task: task))
         
     }
     
@@ -180,11 +180,14 @@ extension TaskTableViewAdapterTests {
     
     class MockTableViewCell: TaskCell {
         
-        var catchedTask: Task?
+        var catchedViewModel: TaskCell.ViewModel?
         
-        override func configCell(with task: Task) {
-            catchedTask = task
+        override var viewModel: TaskCell.ViewModel? {
+            didSet {
+                catchedViewModel = viewModel
+            }
         }
         
     }
+    
 }
