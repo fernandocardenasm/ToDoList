@@ -10,14 +10,14 @@ import XCTest
 
 @testable import ToDoList
 
-class UpcomingTaskDataManagerTests: XCTestCase {
+class TaskDataManagerTests: XCTestCase {
     
-    var sut: UpcomingTaskDataManager!
+    var sut: TaskDataManager!
     
     override func setUp() {
         super.setUp()
         
-        sut = UpcomingTaskDataManager()
+        sut = TaskDataManager()
         
     }
     

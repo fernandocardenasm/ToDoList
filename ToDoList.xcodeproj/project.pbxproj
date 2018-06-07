@@ -18,9 +18,13 @@
 		EDD16D4C20C6C08900938DB0 /* TaskValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D4920C698AC00938DB0 /* TaskValidatorTests.swift */; };
 		EDD16D4E20C7165900938DB0 /* TaskTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D4D20C7165900938DB0 /* TaskTableViewControllerTests.swift */; };
 		EDD16D5020C7201500938DB0 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D4F20C7201500938DB0 /* Section.swift */; };
-		EDD16D5220C7213A00938DB0 /* UpcomingTaskDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5120C7213A00938DB0 /* UpcomingTaskDataManager.swift */; };
-		EDD16D5420C7C72500938DB0 /* UpcomingTaskDataManagerTableViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5320C7C72500938DB0 /* UpcomingTaskDataManagerTableViewAdapterTests.swift */; };
-		EDD16D5620C7DA7000938DB0 /* UpcomingTaskDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5520C7DA7000938DB0 /* UpcomingTaskDataManagerTests.swift */; };
+		EDD16D5420C7C72500938DB0 /* TaskTableViewAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5320C7C72500938DB0 /* TaskTableViewAdapterTests.swift */; };
+		EDD16D5620C7DA7000938DB0 /* TaskDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5520C7DA7000938DB0 /* TaskDataManagerTests.swift */; };
+		EDD16D5820C9871700938DB0 /* TaskDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5720C9871700938DB0 /* TaskDataManager.swift */; };
+		EDD16D5A20C9891E00938DB0 /* TaskTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5920C9891E00938DB0 /* TaskTableViewAdapter.swift */; };
+		EDD16D5C20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5B20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift */; };
+		EDD16D5E20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */; };
+		EDD16D6020C98B2A00938DB0 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +53,13 @@
 		EDD16D4920C698AC00938DB0 /* TaskValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskValidatorTests.swift; sourceTree = "<group>"; };
 		EDD16D4D20C7165900938DB0 /* TaskTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewControllerTests.swift; sourceTree = "<group>"; };
 		EDD16D4F20C7201500938DB0 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		EDD16D5120C7213A00938DB0 /* UpcomingTaskDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTaskDataManager.swift; sourceTree = "<group>"; };
-		EDD16D5320C7C72500938DB0 /* UpcomingTaskDataManagerTableViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTaskDataManagerTableViewAdapterTests.swift; sourceTree = "<group>"; };
-		EDD16D5520C7DA7000938DB0 /* UpcomingTaskDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTaskDataManagerTests.swift; sourceTree = "<group>"; };
+		EDD16D5320C7C72500938DB0 /* TaskTableViewAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewAdapterTests.swift; sourceTree = "<group>"; };
+		EDD16D5520C7DA7000938DB0 /* TaskDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataManagerTests.swift; sourceTree = "<group>"; };
+		EDD16D5720C9871700938DB0 /* TaskDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataManager.swift; sourceTree = "<group>"; };
+		EDD16D5920C9891E00938DB0 /* TaskTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewAdapter.swift; sourceTree = "<group>"; };
+		EDD16D5B20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewAdapterDataSource.swift; sourceTree = "<group>"; };
+		EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewAdapterDelegate.swift; sourceTree = "<group>"; };
+		EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,11 @@
 				EDD16D3120C6943800938DB0 /* Info.plist */,
 				EDD16D4720C694B200938DB0 /* Task.swift */,
 				EDD16D4F20C7201500938DB0 /* Section.swift */,
-				EDD16D5120C7213A00938DB0 /* UpcomingTaskDataManager.swift */,
+				EDD16D5720C9871700938DB0 /* TaskDataManager.swift */,
+				EDD16D5920C9891E00938DB0 /* TaskTableViewAdapter.swift */,
+				EDD16D5B20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift */,
+				EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */,
+				EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -114,8 +126,8 @@
 				EDD16D4520C6944C00938DB0 /* TaskTests.swift */,
 				EDD16D4920C698AC00938DB0 /* TaskValidatorTests.swift */,
 				EDD16D4D20C7165900938DB0 /* TaskTableViewControllerTests.swift */,
-				EDD16D5520C7DA7000938DB0 /* UpcomingTaskDataManagerTests.swift */,
-				EDD16D5320C7C72500938DB0 /* UpcomingTaskDataManagerTableViewAdapterTests.swift */,
+				EDD16D5520C7DA7000938DB0 /* TaskDataManagerTests.swift */,
+				EDD16D5320C7C72500938DB0 /* TaskTableViewAdapterTests.swift */,
 			);
 			path = ToDoListTests;
 			sourceTree = "<group>";
@@ -223,8 +235,12 @@
 			files = (
 				EDD16D5020C7201500938DB0 /* Section.swift in Sources */,
 				EDD16D2820C6943700938DB0 /* TaskTableViewController.swift in Sources */,
+				EDD16D5A20C9891E00938DB0 /* TaskTableViewAdapter.swift in Sources */,
+				EDD16D5E20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift in Sources */,
+				EDD16D5820C9871700938DB0 /* TaskDataManager.swift in Sources */,
+				EDD16D5C20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift in Sources */,
 				EDD16D4820C694B200938DB0 /* Task.swift in Sources */,
-				EDD16D5220C7213A00938DB0 /* UpcomingTaskDataManager.swift in Sources */,
+				EDD16D6020C98B2A00938DB0 /* TaskCell.swift in Sources */,
 				EDD16D2620C6943700938DB0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,8 +252,8 @@
 				EDD16D4620C6944C00938DB0 /* TaskTests.swift in Sources */,
 				EDD16D3B20C6943800938DB0 /* ToDoListTests.swift in Sources */,
 				EDD16D4E20C7165900938DB0 /* TaskTableViewControllerTests.swift in Sources */,
-				EDD16D5420C7C72500938DB0 /* UpcomingTaskDataManagerTableViewAdapterTests.swift in Sources */,
-				EDD16D5620C7DA7000938DB0 /* UpcomingTaskDataManagerTests.swift in Sources */,
+				EDD16D5420C7C72500938DB0 /* TaskTableViewAdapterTests.swift in Sources */,
+				EDD16D5620C7DA7000938DB0 /* TaskDataManagerTests.swift in Sources */,
 				EDD16D4C20C6C08900938DB0 /* TaskValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

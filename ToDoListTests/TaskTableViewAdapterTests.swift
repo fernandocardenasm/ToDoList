@@ -10,13 +10,12 @@ import XCTest
 
 @testable import ToDoList
 
-
-class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
+class TaskTableViewAdapterTests: XCTestCase {
     
     var section: Section<Task>!
     var task: Task!
     
-    var sut: UpcomingTaskDataManagerTableViewAdapter!
+    var sut: TaskTableViewAdapter!
     var tableView: UITableView!
     
     override func setUp() {
@@ -26,12 +25,12 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
         task = Task(title: "First Task", dueDate: 123456)
         section = Section<Task>(title: "First Title", items: [task])
         
-        sut = UpcomingTaskDataManagerTableViewAdapter(upcomingTaskDataManager: UpcomingTaskDataManager())
+        sut = TaskTableViewAdapter(taskDataManager: TaskDataManager())
         tableView = UITableView()
         tableView?.dataSource = sut
         tableView.delegate = sut
-        sut.upcomingTaskDataManager.removeAllSections()
-        sut.upcomingTaskDataManager.add(section: section)
+        sut.taskDataManager.removeAllSections()
+        sut.taskDataManager.add(section: section)
         
         //Not sure why it is not always necessary to add this even if I added a new section. It adds some extra milliseconds in the test if it is uncommented.
 //        tableView.reloadData()
@@ -41,19 +40,19 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
     //Datasource
     func testNumberOfSections_IsNumberOfSections(){
         
-        let numberOfSections = sut.upcomingTaskDataManager.numberOfSections()
+        let numberOfSections = sut.taskDataManager.numberOfSections()
         XCTAssertEqual(tableView.numberOfSections, numberOfSections)
         
     }
     
     func testNumberOfRows_InSectionZeroAndTaskAdded_IsNumberOfTasksInSection(){
         
-        var numberOfTasksInSectionZero = sut.upcomingTaskDataManager.numberOfTasks(inSection: 0)
+        var numberOfTasksInSectionZero = sut.taskDataManager.numberOfTasks(inSection: 0)
         
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), numberOfTasksInSectionZero)
         
-        sut.upcomingTaskDataManager.add(task: task, inSection: 0)
-        numberOfTasksInSectionZero = sut.upcomingTaskDataManager.numberOfTasks(inSection: 0)
+        sut.taskDataManager.add(task: task, inSection: 0)
+        numberOfTasksInSectionZero = sut.taskDataManager.numberOfTasks(inSection: 0)
         
         tableView.reloadData()
         
@@ -63,12 +62,12 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
     
     func testNumberOfRows_InSectionZeroAndTaskZeroRemoved_IsNumberOfTasksInSection(){
         
-        var numberOfTasksInSectionZero = sut.upcomingTaskDataManager.numberOfTasks(inSection: 0)
+        var numberOfTasksInSectionZero = sut.taskDataManager.numberOfTasks(inSection: 0)
         
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), numberOfTasksInSectionZero)
         
-        sut.upcomingTaskDataManager.removeTask(at: 0, inSection: 0)
-        numberOfTasksInSectionZero = sut.upcomingTaskDataManager.numberOfTasks(inSection: 0)
+        sut.taskDataManager.removeTask(at: 0, inSection: 0)
+        numberOfTasksInSectionZero = sut.taskDataManager.numberOfTasks(inSection: 0)
         
         tableView.reloadData()
         
@@ -107,7 +106,7 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
     func testCellForRow_CallsConfigCell() {
         let mockTableView = MockTableView.mockTableView(withDataSource: sut)
         
-        sut.upcomingTaskDataManager.add(section: section)
+        sut.taskDataManager.add(section: section)
         mockTableView.reloadData()
         
         let cell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! MockTableViewCell
@@ -120,7 +119,7 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
     
     func test_TitleForHeaderInSection_WithSectionZero_IsTitleOfSection() {
         
-        let titleSection = sut.upcomingTaskDataManager.titleOfSection(at: 0)
+        let titleSection = sut.taskDataManager.titleOfSection(at: 0)
         
         let cellTitle = sut.tableView(tableView, titleForHeaderInSection: 0)
         
@@ -142,7 +141,7 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
         
         sut.tableView(tableView, commit: .delete, forRowAt: IndexPath(row: 0, section: 0))
         
-        XCTAssertEqual(sut.upcomingTaskDataManager.numberOfTasks(inSection: 0), 0)
+        XCTAssertEqual(sut.taskDataManager.numberOfTasks(inSection: 0), 0)
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 0)
         
     }
@@ -157,7 +156,7 @@ class UpcomingTaskDataManagerTableViewAdapterTests: XCTestCase {
     
 }
 
-extension UpcomingTaskDataManagerTableViewAdapterTests {
+extension TaskTableViewAdapterTests {
     class MockTableView: UITableView {
         
         class func mockTableView(withDataSource dataSource: UITableViewDataSource) -> MockTableView{

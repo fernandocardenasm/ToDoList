@@ -22,16 +22,16 @@ class TaskTableViewControllerTests: XCTestCase {
     }
     
     func testLoadingViewUpcomingTaskDataManagerIsNotNil() {
-        XCTAssertNotNil(sut.upcomingTaskDataManager)
+        XCTAssertNotNil(sut.taskDataManager)
     }
     
     func testLoadingView_SetsTableViewDataSource(){
         
-        XCTAssertTrue(sut.tableView.dataSource is UpcomingTaskDataManagerTableViewAdapter)
+        XCTAssertTrue(sut.tableView.dataSource is TaskTableViewAdapter)
     }
     
     func testLoadingView_SetsTableViewDelegate(){
-        XCTAssertTrue(sut.tableView.delegate is UpcomingTaskDataManagerTableViewAdapter)
+        XCTAssertTrue(sut.tableView.delegate is TaskTableViewAdapter)
     }
     
     
