@@ -65,9 +65,9 @@ extension UpcomingTaskDataManagerTableViewAdapter: UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TaskCell.self), for: indexPath) as! TaskCell
         
-        if cell is TaskCell {
-            print(indexPath)
-        }
+        let task = upcomingTaskDataManager.task(at: indexPath.row, inSection: indexPath.section)
+        
+        cell.configCell(with: task)
         
         return cell
     }
@@ -84,11 +84,6 @@ extension UpcomingTaskDataManagerTableViewAdapter: UITableViewDelegate{
         return 100
     }
 }
-
-class ACell: UITableViewCell {
-    
-}
-
 
 class TaskCell: UITableViewCell {
     
@@ -114,6 +109,10 @@ class TaskCell: UITableViewCell {
         label.textAlignment = .right
         return label
     }()
+    
+    func configCell(with task: Task){
+        
+    }
     
     func setupViews() {
         addSubview(titleLabel)

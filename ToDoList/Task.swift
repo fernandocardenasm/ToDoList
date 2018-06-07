@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Task {
+struct Task: Equatable {
     let title: String
     let dueDate: Int
 }
