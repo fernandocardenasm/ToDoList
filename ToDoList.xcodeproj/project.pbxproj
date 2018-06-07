@@ -25,6 +25,7 @@
 		EDD16D5C20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5B20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift */; };
 		EDD16D5E20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */; };
 		EDD16D6020C98B2A00938DB0 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */; };
+		EDD16D6220C9B7CC00938DB0 /* TaskCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		EDD16D5B20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewAdapterDataSource.swift; sourceTree = "<group>"; };
 		EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewAdapterDelegate.swift; sourceTree = "<group>"; };
 		EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				EDD16D4D20C7165900938DB0 /* TaskTableViewControllerTests.swift */,
 				EDD16D5520C7DA7000938DB0 /* TaskDataManagerTests.swift */,
 				EDD16D5320C7C72500938DB0 /* TaskTableViewAdapterTests.swift */,
+				EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */,
 			);
 			path = ToDoListTests;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				EDD16D4620C6944C00938DB0 /* TaskTests.swift in Sources */,
 				EDD16D3B20C6943800938DB0 /* ToDoListTests.swift in Sources */,
+				EDD16D6220C9B7CC00938DB0 /* TaskCellTests.swift in Sources */,
 				EDD16D4E20C7165900938DB0 /* TaskTableViewControllerTests.swift in Sources */,
 				EDD16D5420C7C72500938DB0 /* TaskTableViewAdapterTests.swift in Sources */,
 				EDD16D5620C7DA7000938DB0 /* TaskDataManagerTests.swift in Sources */,

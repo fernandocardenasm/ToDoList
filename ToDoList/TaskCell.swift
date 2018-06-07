@@ -12,7 +12,6 @@ class TaskCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         setupViews()
     }
     
@@ -43,27 +42,26 @@ class TaskCell: UITableViewCell {
         }
     }
     
-    func configCell(with task: Task){
-        
-    }
-    
     func setupViews() {
-        addSubview(titleLabel)
-        addSubview(dueDateLabel)
         
-        backgroundColor = .green
+        //Without contentView. also works, but for the test it was necessary to add the views as subviews of contentView
+        
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(dueDateLabel)
+        
+        contentView.backgroundColor = .green
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        titleLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.7).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        titleLabel.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.7).isActive = true
         
         dueDateLabel.translatesAutoresizingMaskIntoConstraints = false
         dueDateLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor)
-        dueDateLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        dueDateLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        dueDateLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        dueDateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        dueDateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        dueDateLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
     }
     
@@ -73,7 +71,6 @@ extension TaskCell {
     struct ViewModel: Equatable {
         let title: String
         let dueDate: String
-        
     }
 }
 
