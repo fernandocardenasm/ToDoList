@@ -21,7 +21,7 @@ class TaskTableViewControllerTests: XCTestCase {
         
     }
     
-    func testLoadingViewUpcomingTaskDataManagerIsNotNil() {
+    func testLoadingViewTaskDataManagerIsNotNil() {
         XCTAssertNotNil(sut.taskDataManager)
     }
     

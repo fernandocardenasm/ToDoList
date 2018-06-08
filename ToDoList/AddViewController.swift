@@ -15,6 +15,14 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupAddView()
+        
+    }
+}
+
+extension AddViewController {
+    
+    fileprivate func setupAddView() {
         view.addSubview(addView)
         addView.backgroundColor = .white
         addView.translatesAutoresizingMaskIntoConstraints = false
@@ -22,8 +30,8 @@ class AddViewController: UIViewController {
         addView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         addView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         addView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4).isActive = true
-        
     }
+    
 }
 
 class AddView: UIView {

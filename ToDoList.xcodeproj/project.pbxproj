@@ -27,6 +27,8 @@
 		EDD16D6020C98B2A00938DB0 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */; };
 		EDD16D6220C9B7CC00938DB0 /* TaskCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */; };
 		EDD16D6420CA750A00938DB0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6320CA750A00938DB0 /* AddViewController.swift */; };
+		EDD16D6620CABADC00938DB0 /* AddViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */; };
+		EDD16D6820CABE9900938DB0 /* AddViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6720CABE9900938DB0 /* AddViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTests.swift; sourceTree = "<group>"; };
 		EDD16D6320CA750A00938DB0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewControllerTests.swift; sourceTree = "<group>"; };
+		EDD16D6720CABE9900938DB0 /* AddViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 				EDD16D5520C7DA7000938DB0 /* TaskDataManagerTests.swift */,
 				EDD16D5320C7C72500938DB0 /* TaskTableViewAdapterTests.swift */,
 				EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */,
+				EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */,
+				EDD16D6720CABE9900938DB0 /* AddViewTests.swift */,
 			);
 			path = ToDoListTests;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			files = (
 				EDD16D4620C6944C00938DB0 /* TaskTests.swift in Sources */,
 				EDD16D3B20C6943800938DB0 /* ToDoListTests.swift in Sources */,
+				EDD16D6620CABADC00938DB0 /* AddViewControllerTests.swift in Sources */,
+				EDD16D6820CABE9900938DB0 /* AddViewTests.swift in Sources */,
 				EDD16D6220C9B7CC00938DB0 /* TaskCellTests.swift in Sources */,
 				EDD16D4E20C7165900938DB0 /* TaskTableViewControllerTests.swift in Sources */,
 				EDD16D5420C7C72500938DB0 /* TaskTableViewAdapterTests.swift in Sources */,
