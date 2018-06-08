@@ -34,6 +34,16 @@ class TaskTableViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.tableView.delegate is TaskTableViewAdapter)
     }
     
+    func testLoadingView_IsAddButtonNotNil() {
+        
+        XCTAssertNotNil(sut.navigationItem.rightBarButtonItem)
+    }
+    
+    func testingLoadingView_IsRightBarButtonSelectorSaveTask() {
+        
+        XCTAssertNotNil(sut.navigationItem.rightBarButtonItem?.action)
+        XCTAssertEqual(sut.navigationItem.rightBarButtonItem?.action, #selector(sut.presentAddViewController))
+    }
     
     override func tearDown() {
         

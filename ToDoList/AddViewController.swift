@@ -16,6 +16,7 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         
         setupAddView()
+        setupNavigationBar()
         
     }
 }
@@ -30,6 +31,16 @@ extension AddViewController {
         addView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         addView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         addView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4).isActive = true
+    }
+    
+    func setupNavigationBar() {
+        navigationItem.title = "New Task"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(saveTask))
+    }
+    
+    @objc func saveTask() {
+        print("Title text: \(addView.titleTextField.text)")
+        print("DueDate text: \(addView.dueDateDatePicker.date)")
     }
     
 }
