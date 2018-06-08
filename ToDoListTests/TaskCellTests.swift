@@ -52,7 +52,7 @@ class TaskCellTests: XCTestCase {
         let viewModel = TaskCell.ViewModel(task: task)
         
         cell.viewModel = viewModel
-        
+
         XCTAssertEqual(cell.titleLabel.text, viewModel.title)
     }
     

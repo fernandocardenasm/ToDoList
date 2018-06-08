@@ -18,8 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch
         
         
+
+//        let controller = AddViewController()
+//        window?.rootViewController = controller
+        
         let controller = TaskTableViewController(style: .plain)
-//        let controller = ViewController()
         window?.rootViewController = UINavigationController(rootViewController: controller)
         
         return true

@@ -19,6 +19,7 @@ class TaskTableViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         setupTableView()
+        setupAddBarButtonItem()
     
     }
 
@@ -38,5 +39,15 @@ extension TaskTableViewController {
         
         tableView.dataSource = taskTableViewAdapter
         tableView.delegate = taskTableViewAdapter
+    }
+    
+    func setupAddBarButtonItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentAddViewController))
+    }
+    
+    
+    @objc func presentAddViewController() {
+        let addViewController = AddViewController()
+        navigationController?.pushViewController(addViewController, animated: true)
     }
 }

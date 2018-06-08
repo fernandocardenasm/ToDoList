@@ -26,6 +26,7 @@
 		EDD16D5E20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */; };
 		EDD16D6020C98B2A00938DB0 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */; };
 		EDD16D6220C9B7CC00938DB0 /* TaskCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */; };
+		EDD16D6420CA750A00938DB0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6320CA750A00938DB0 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewAdapterDelegate.swift; sourceTree = "<group>"; };
 		EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTests.swift; sourceTree = "<group>"; };
+		EDD16D6320CA750A00938DB0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				EDD16D2520C6943700938DB0 /* AppDelegate.swift */,
 				EDD16D2720C6943700938DB0 /* TaskTableViewController.swift */,
+				EDD16D6320CA750A00938DB0 /* AddViewController.swift */,
 				EDD16D2920C6943700938DB0 /* Main.storyboard */,
 				EDD16D2C20C6943800938DB0 /* Assets.xcassets */,
 				EDD16D2E20C6943800938DB0 /* LaunchScreen.storyboard */,
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD16D6420CA750A00938DB0 /* AddViewController.swift in Sources */,
 				EDD16D5020C7201500938DB0 /* Section.swift in Sources */,
 				EDD16D2820C6943700938DB0 /* TaskTableViewController.swift in Sources */,
 				EDD16D5A20C9891E00938DB0 /* TaskTableViewAdapter.swift in Sources */,
