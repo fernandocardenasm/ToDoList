@@ -56,9 +56,9 @@ extension TaskTableViewController {
 extension TaskTableViewController: AddTaskDelegate {
     func saveTask(task: Task) {
         
-        let section = TaskSection.init(forTaskDueDate: task.dueDateTimestamp.dateSince1970).rawValue
+        let sectionIndex = TaskSection.init(forTaskDueDate: task.dueDateTimestamp.dateSince1970).rawValue
         
-        taskDataManager?.add(task: task, inSection: section)
+        taskDataManager?.add(task: task, inSection: sectionIndex)
         tableView.reloadData()
     }
     

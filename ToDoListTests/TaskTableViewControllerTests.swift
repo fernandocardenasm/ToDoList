@@ -45,6 +45,23 @@ class TaskTableViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.navigationItem.rightBarButtonItem?.action, #selector(sut.presentAddViewController))
     }
     
+    func testSaveTask_WithTask_IncreasesTasksInSectionByOne() {
+        
+        let dueDate = Date().plus(numberOfDays: 2)
+        let task = Task(title: "Foo", dueDateTimestamp: dueDate.timeIntervalSince1970)
+        
+        let sectionIndex = TaskSection.init(forTaskDueDate: dueDate).rawValue
+        
+        let numberOfTasksInSection = sut.taskDataManager?.numberOfTasks(inSection: sectionIndex)
+        
+        sut.saveTask(task: task)
+        
+        let numberOfTaskInSectionAfter = sut.taskDataManager?.numberOfTasks(inSection: sectionIndex)
+        
+        XCTAssertEqual(numberOfTasksInSection! + 1, numberOfTaskInSectionAfter)
+
+    }
+    
     override func tearDown() {
         
         sut = nil

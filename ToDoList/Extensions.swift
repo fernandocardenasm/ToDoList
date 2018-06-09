@@ -10,20 +10,24 @@ import Foundation
 
 extension String {
     
-    var timestampSince1970: Int {
+    var timestampSince1970: Double {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
-        return Int((dateFormatter.date(from: self)?.timeIntervalSince1970)!)
+        return (dateFormatter.date(from: self)?.timeIntervalSince1970)!
     }
 }
 
-extension Int {
+extension Double {
     var dateSince1970: Date {
-        return Date(timeIntervalSince1970: TimeInterval(self))
+        return Date(timeIntervalSince1970: self)
     }
 }
 
 extension Date {
+    
+    func plus(numberOfDays number: Int) -> Date {
+        return Calendar.current.date(byAdding: .day, value: number, to: self)!
+    }
     
     func intervalUntilNow(ofComponent comp: Calendar.Component) -> Int {
         

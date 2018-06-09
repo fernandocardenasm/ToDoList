@@ -31,6 +31,7 @@
 		EDD16D6820CABE9900938DB0 /* AddViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6720CABE9900938DB0 /* AddViewTests.swift */; };
 		EDD16D6A20CBD12900938DB0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6920CBD12900938DB0 /* Extensions.swift */; };
 		EDD16D6C20CC3FB900938DB0 /* TaskSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6B20CC3FB900938DB0 /* TaskSection.swift */; };
+		EDD16D6E20CC5E8000938DB0 /* TaskSectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6D20CC5E8000938DB0 /* TaskSectionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		EDD16D6720CABE9900938DB0 /* AddViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewTests.swift; sourceTree = "<group>"; };
 		EDD16D6920CBD12900938DB0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EDD16D6B20CC3FB900938DB0 /* TaskSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSection.swift; sourceTree = "<group>"; };
+		EDD16D6D20CC5E8000938DB0 /* TaskSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSectionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				EDD16D6120C9B7CC00938DB0 /* TaskCellTests.swift */,
 				EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */,
 				EDD16D6720CABE9900938DB0 /* AddViewTests.swift */,
+				EDD16D6D20CC5E8000938DB0 /* TaskSectionTests.swift */,
 			);
 			path = ToDoListTests;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				EDD16D4620C6944C00938DB0 /* TaskTests.swift in Sources */,
 				EDD16D3B20C6943800938DB0 /* ToDoListTests.swift in Sources */,
+				EDD16D6E20CC5E8000938DB0 /* TaskSectionTests.swift in Sources */,
 				EDD16D6620CABADC00938DB0 /* AddViewControllerTests.swift in Sources */,
 				EDD16D6820CABE9900938DB0 /* AddViewTests.swift in Sources */,
 				EDD16D6220C9B7CC00938DB0 /* TaskCellTests.swift in Sources */,

@@ -54,7 +54,7 @@ class AddViewControllerTests: XCTestCase {
         
     }
     
-    func testSaveTask_WithValidTitle_CreatesATask() {
+    func testCreateTask_WithValidTitle_CreatesATask() {
         
         let title = "Foo"
         let dueDate = Date(timeIntervalSince1970: 1528536334)
@@ -69,7 +69,7 @@ class AddViewControllerTests: XCTestCase {
         
     }
     
-    func testSaveTask_WithNoValidTitle_CreatesATask() {
+    func testCreateTask_WithNoValidTitle_CreatesATask() {
         
         let title = ""
         let dueDate = Date(timeIntervalSince1970: 1528536334)
