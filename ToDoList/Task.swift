@@ -24,8 +24,11 @@ struct TaskInputsValidator {
         return true
     }
     
-    func isDateValid(dueDate: Int) -> Bool {
-        return true
-    }
+    //The datepicker always returns a valid date
+    //activate this function if a certain timeinterval validation is necessary
+//    func isDateValid(dueDate: Date) -> Bool {
+//
+//        return true
+//    }
     
 }

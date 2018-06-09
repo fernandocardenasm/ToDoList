@@ -46,8 +46,40 @@ class AddViewControllerTests: XCTestCase {
     
     func testingLoadingView_IsRightBarButtonSelectorSaveTask() {
         
-        XCTAssertNotNil(sut.navigationItem.rightBarButtonItem?.action)
-        XCTAssertEqual(sut.navigationItem.rightBarButtonItem?.action, #selector(sut.saveTask))
+        let buttonItem = sut.navigationItem.rightBarButtonItem
+        
+        XCTAssertNotNil(buttonItem?.action)
+        XCTAssertNotNil(buttonItem?.target)
+        XCTAssertEqual(buttonItem?.action, #selector(sut.saveTask))
+        
+    }
+    
+    func testSaveTask_WithValidTitle_CreatesATask() {
+        
+        let title = "Foo"
+        let dueDate = Date(timeIntervalSince1970: 1528536334)
+        
+        sut.addView.titleTextField.text = title
+        sut.addView.dueDateDatePicker.date = dueDate
+        sut.saveTask()
+        
+        let viewModel = TaskCell.ViewModel(title: title, dueDate: "\(dueDate)")
+        
+        XCTAssertEqual(sut.task!, viewModel.task)
+        
+    }
+    
+    func testSaveTask_WithNoValidTitle_CreatesATask() {
+        
+        let title = ""
+        let dueDate = Date(timeIntervalSince1970: 1528536334)
+        
+        sut.addView.titleTextField.text = title
+        sut.addView.dueDateDatePicker.date = dueDate
+        sut.saveTask()
+        
+        XCTAssertNil(sut.task)
+        
     }
     
     override func tearDown() {

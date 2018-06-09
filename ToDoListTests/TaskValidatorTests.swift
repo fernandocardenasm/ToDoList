@@ -38,11 +38,12 @@ class TaskValidator: XCTestCase {
         
     }
     
-    func testIsTimestampValid_WithSomeDate_ReturnsTrue() {
-        let dueDate = 1234
-        
-        XCTAssertTrue(validator.isDateValid(dueDate: dueDate))
-    }
+    //To be refactor when a date must be validated
+//    func testIsTimestampValid_WithSomeDate_ReturnsTrue() {
+//        let dueDate = 1234
+//
+//        XCTAssertTrue(validator.isDateValid(dueDate: dueDate))
+//    }
     
     
 }

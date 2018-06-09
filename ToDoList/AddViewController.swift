@@ -12,6 +12,9 @@ class AddViewController: UIViewController {
     
     let addView = AddView()
     
+    //Added just for the test
+    var task: Task?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,11 +41,27 @@ extension AddViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(saveTask))
     }
     
-    @objc func saveTask() {
+    @objc func saveTask(){
         
-        let viewModel = TaskCell.ViewModel(title: addView.titleTextField.text!, dueDate: "\(addView.dueDateDatePicker.date)")
-        let task = viewModel.task
-        print(task)
+        let title = addView.titleTextField.text!
+        
+        if isInputDataValid(title: title) {
+            //The date is passed is a string to keep the consistency of the viewmodel and not and extra struct
+            let viewModel = TaskCell.ViewModel(title: title, dueDate: "\(addView.dueDateDatePicker.date)")
+            task = viewModel.task
+        }
+        else {
+            print("The title is not valid.")
+        }
+    }
+    
+    func isInputDataValid(title: String) -> Bool {
+        let taskValidator = TaskInputsValidator()
+        
+        if taskValidator.isTitleValid(title: title) {
+            return true
+        }
+        return false
     }
     
 }
