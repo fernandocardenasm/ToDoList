@@ -30,6 +30,7 @@
 		EDD16D6620CABADC00938DB0 /* AddViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */; };
 		EDD16D6820CABE9900938DB0 /* AddViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6720CABE9900938DB0 /* AddViewTests.swift */; };
 		EDD16D6A20CBD12900938DB0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6920CBD12900938DB0 /* Extensions.swift */; };
+		EDD16D6C20CC3FB900938DB0 /* TaskSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6B20CC3FB900938DB0 /* TaskSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewControllerTests.swift; sourceTree = "<group>"; };
 		EDD16D6720CABE9900938DB0 /* AddViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewTests.swift; sourceTree = "<group>"; };
 		EDD16D6920CBD12900938DB0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EDD16D6B20CC3FB900938DB0 /* TaskSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */,
 				EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */,
 				EDD16D6920CBD12900938DB0 /* Extensions.swift */,
+				EDD16D6B20CC3FB900938DB0 /* TaskSection.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				EDD16D5020C7201500938DB0 /* Section.swift in Sources */,
 				EDD16D2820C6943700938DB0 /* TaskTableViewController.swift in Sources */,
 				EDD16D5A20C9891E00938DB0 /* TaskTableViewAdapter.swift in Sources */,
+				EDD16D6C20CC3FB900938DB0 /* TaskSection.swift in Sources */,
 				EDD16D5E20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift in Sources */,
 				EDD16D5820C9871700938DB0 /* TaskDataManager.swift in Sources */,
 				EDD16D5C20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift in Sources */,

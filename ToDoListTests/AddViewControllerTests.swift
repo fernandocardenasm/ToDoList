@@ -50,7 +50,7 @@ class AddViewControllerTests: XCTestCase {
         
         XCTAssertNotNil(buttonItem?.action)
         XCTAssertNotNil(buttonItem?.target)
-        XCTAssertEqual(buttonItem?.action, #selector(sut.saveTask))
+        XCTAssertEqual(buttonItem?.action, #selector(sut.createTask))
         
     }
     
@@ -61,7 +61,7 @@ class AddViewControllerTests: XCTestCase {
         
         sut.addView.titleTextField.text = title
         sut.addView.dueDateDatePicker.date = dueDate
-        sut.saveTask()
+        sut.createTask()
         
         let viewModel = TaskCell.ViewModel(title: title, dueDate: "\(dueDate)")
         
@@ -76,7 +76,7 @@ class AddViewControllerTests: XCTestCase {
         
         sut.addView.titleTextField.text = title
         sut.addView.dueDateDatePicker.date = dueDate
-        sut.saveTask()
+        sut.createTask()
         
         XCTAssertNil(sut.task)
         

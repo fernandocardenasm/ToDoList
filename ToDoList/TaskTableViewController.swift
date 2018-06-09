@@ -48,6 +48,19 @@ extension TaskTableViewController {
     
     @objc func presentAddViewController() {
         let addViewController = AddViewController()
+        addViewController.addTaskDelegate = self
         navigationController?.pushViewController(addViewController, animated: true)
     }
+}
+
+extension TaskTableViewController: AddTaskDelegate {
+    func saveTask(task: Task) {
+        
+        let section = TaskSection.init(forTaskDueDate: task.dueDateTimestamp.dateSince1970).rawValue
+        
+        taskDataManager?.add(task: task, inSection: section)
+        tableView.reloadData()
+    }
+    
+    
 }

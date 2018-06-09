@@ -12,10 +12,10 @@ import XCTest
 class TasksTests: XCTestCase {
     
     func testInitialize_WithDescriptionAndDate_SetsNameAndDate(){
-        let task = Task(title: "", dueDate: 1234)
+        let task = Task(title: "", dueDateTimestamp: 1528329600)
         
         XCTAssertEqual(task.title, "")
-        XCTAssertEqual(task.dueDate, 1234)
+        XCTAssertEqual(task.dueDateTimestamp, 1528329600)
     }
     
 }

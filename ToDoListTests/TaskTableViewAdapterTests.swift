@@ -22,7 +22,7 @@ class TaskTableViewAdapterTests: XCTestCase {
         super.setUp()
         
         //Variables
-        task = Task(title: "First Task", dueDate: 123456)
+        task = Task(title: "First Task", dueDateTimestamp: 1528329600)
         section = Section<Task>(title: "First Title", items: [task])
         
         sut = TaskTableViewAdapter(taskDataManager: TaskDataManager())

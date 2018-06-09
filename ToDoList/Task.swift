@@ -10,7 +10,7 @@ import Foundation
 
 struct Task: Equatable {
     let title: String
-    let dueDate: Int
+    let dueDateTimestamp: Int
 }
 
 struct TaskInputsValidator {

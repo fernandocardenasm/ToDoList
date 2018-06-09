@@ -48,7 +48,7 @@ class TaskCellTests: XCTestCase {
     
     func testViewModel_SetsTitleLabel() {
         
-        let task = Task(title: "First Task", dueDate: 123456)
+        let task = Task(title: "First Task", dueDateTimestamp: 1528329600)
         let viewModel = TaskCell.ViewModel(task: task)
         
         cell.viewModel = viewModel
@@ -58,7 +58,7 @@ class TaskCellTests: XCTestCase {
     
     func testViewModel_SetsDueDateLabel() {
         
-        let task = Task(title: "First Task", dueDate: 123456)
+        let task = Task(title: "First Task", dueDateTimestamp: 1528329600)
         let viewModel = TaskCell.ViewModel(task: task)
         
         cell.viewModel = viewModel

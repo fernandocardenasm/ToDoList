@@ -12,8 +12,10 @@ class AddViewController: UIViewController {
     
     let addView = AddView()
     
+    weak var addTaskDelegate: AddTaskDelegate?
+    
     //Added just for the test
-    var task: Task?
+    private(set) var task: Task?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,10 @@ class AddViewController: UIViewController {
         setupNavigationBar()
         
     }
+}
+
+protocol AddTaskDelegate: AnyObject {
+    func saveTask(task: Task)
 }
 
 extension AddViewController {
@@ -38,10 +44,10 @@ extension AddViewController {
     
     func setupNavigationBar() {
         navigationItem.title = "New Task"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(saveTask))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(createTask))
     }
     
-    @objc func saveTask(){
+    @objc func createTask(){
         
         let title = addView.titleTextField.text!
         
@@ -49,6 +55,10 @@ extension AddViewController {
             //The date is passed is a string to keep the consistency of the viewmodel and not and extra struct
             let viewModel = TaskCell.ViewModel(title: title, dueDate: "\(addView.dueDateDatePicker.date)")
             task = viewModel.task
+            
+            addTaskDelegate?.saveTask(task: task!)
+            _ = navigationController?.popViewController(animated: true)
+            
         }
         else {
             print("The title is not valid.")
