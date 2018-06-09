@@ -39,8 +39,10 @@ extension AddViewController {
     }
     
     @objc func saveTask() {
-        print("Title text: \(addView.titleTextField.text)")
-        print("DueDate text: \(addView.dueDateDatePicker.date)")
+        
+        let viewModel = TaskCell.ViewModel(title: addView.titleTextField.text!, dueDate: "\(addView.dueDateDatePicker.date)")
+        let task = viewModel.task
+        print(task)
     }
     
 }
@@ -64,6 +66,7 @@ class AddView: UIView {
     
     lazy var dueDateDatePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
         return datePicker
     }()
     

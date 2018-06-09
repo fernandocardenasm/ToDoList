@@ -29,6 +29,7 @@
 		EDD16D6420CA750A00938DB0 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6320CA750A00938DB0 /* AddViewController.swift */; };
 		EDD16D6620CABADC00938DB0 /* AddViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */; };
 		EDD16D6820CABE9900938DB0 /* AddViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6720CABE9900938DB0 /* AddViewTests.swift */; };
+		EDD16D6A20CBD12900938DB0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D6920CBD12900938DB0 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		EDD16D6320CA750A00938DB0 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewControllerTests.swift; sourceTree = "<group>"; };
 		EDD16D6720CABE9900938DB0 /* AddViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewTests.swift; sourceTree = "<group>"; };
+		EDD16D6920CBD12900938DB0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				EDD16D5B20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift */,
 				EDD16D5D20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift */,
 				EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */,
+				EDD16D6920CBD12900938DB0 /* Extensions.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				EDD16D5C20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift in Sources */,
 				EDD16D4820C694B200938DB0 /* Task.swift in Sources */,
 				EDD16D6020C98B2A00938DB0 /* TaskCell.swift in Sources */,
+				EDD16D6A20CBD12900938DB0 /* Extensions.swift in Sources */,
 				EDD16D2620C6943700938DB0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

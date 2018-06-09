@@ -79,4 +79,11 @@ extension TaskCell.ViewModel {
         title = task.title
         dueDate = "\(task.dueDate)"
     }
+    
+    var task: Task {
+        let title = self.title.trimmingCharacters(in: .whitespaces)
+        let dueDate = self.dueDate.timestampSince1970
+        
+        return Task(title: title, dueDate: dueDate)
+    }
 }
