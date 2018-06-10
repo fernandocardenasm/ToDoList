@@ -62,6 +62,20 @@ class TaskTableViewControllerTests: XCTestCase {
 
     }
     
+    func testSaveTask_WithTask_SameTask() {
+        
+        let dueDate = Date().plus(numberOfDays: 2)
+        let task = Task(title: "Foo", dueDateTimestamp: dueDate.timeIntervalSince1970)
+            
+        sut.taskDataManager?.removeTasksInAllSections()
+        let sectionIndex = TaskSection.init(forTaskDueDate: dueDate).rawValue
+        
+        sut.saveTask(task: task)
+        
+        XCTAssertEqual(sut.taskDataManager?.task(at: 0, inSection: sectionIndex), task)
+        
+    }
+    
     override func tearDown() {
         
         sut = nil

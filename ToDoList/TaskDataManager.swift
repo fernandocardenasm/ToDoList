@@ -37,6 +37,17 @@ class TaskDataManager {
         sections.removeAll()
     }
     
+    func removeTasks(inSection index: Int) {
+        sections[index].items.removeAll()
+    }
+    
+    //It could be improved with a higer order function, but it shows an error that section is inmmutable
+    func removeTasksInAllSections() {
+        for index in 0...numberOfSections() - 1{
+            sections[index].items.removeAll()
+        }
+    }
+    
     func numberOfSections() -> Int {
         return sections.count
     }

@@ -11,5 +11,6 @@ import Foundation
 struct Section<Item> {
     let title: String
     var items: [Item]
+    
 }
 
