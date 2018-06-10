@@ -10,9 +10,9 @@ import Foundation
 
 class TaskDataManager {
     private var sections: [Section<Task>] = [
-        Section<Task>(title: "Now", items: [Task(title: "First Task Overdue", dueDateTimestamp: 1), Task(title: "Second Task overdue", dueDateTimestamp: 12345)]),
-        Section<Task>(title: "Soon", items: [Task(title: "First Task Now", dueDateTimestamp: 2)]),
-        Section<Task>(title: "Upcoming", items: [Task(title: "First Task Upcoming", dueDateTimestamp: 3)])
+        Section<Task>(title: "Now", items: [Task(title: "First Task Overdue", dueDateTimestamp: 1532054600), Task(title: "Second Task overdue", dueDateTimestamp: 1532024500)]),
+        Section<Task>(title: "Soon", items: [Task(title: "First Task Now", dueDateTimestamp: 1532144700)]),
+        Section<Task>(title: "Upcoming", items: [Task(title: "First Task Upcoming", dueDateTimestamp: 1732044800)])
     ]
     
     //    private var sections: [Section<Task>] = []

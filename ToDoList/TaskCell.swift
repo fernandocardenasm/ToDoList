@@ -77,7 +77,9 @@ extension TaskCell {
 extension TaskCell.ViewModel {
     init(task: Task) {
         title = task.title
-        dueDate = "\(task.dueDateTimestamp)"
+        
+        //Maybe not working properly
+        dueDate =  task.dueDateTimestamp.dateSince1970.daysAgoFromNow()
     }
     
     var task: Task {
@@ -86,4 +88,7 @@ extension TaskCell.ViewModel {
         
         return Task(title: title, dueDateTimestamp: dueDate)
     }
+    
+    
+    
 }

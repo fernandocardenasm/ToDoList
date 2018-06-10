@@ -30,26 +30,22 @@ extension Date {
     }
     
     func intervalUntilNow(ofComponent comp: Calendar.Component) -> Int {
-        
+
         let dateNow = Date()
-        
+
         let currentCalendar = Calendar.current
-        
+
         guard let start = currentCalendar.ordinality(of: comp, in: .era, for: dateNow) else { return 0 }
         guard let end = currentCalendar.ordinality(of: comp, in: .era, for: self) else { return 0 }
-        
+
         return end - start
     }
     
-    //Not used now, but it is worth to keep in case we need to compare the date with another one
-//    func interval(ofComponent comp: Calendar.Component, fromDate date: Date) -> Int {
-//
-//        let currentCalendar = Calendar.current
-//
-//        guard let start = currentCalendar.ordinality(of: comp, in: .era, for: date) else { return 0 }
-//        guard let end = currentCalendar.ordinality(of: comp, in: .era, for: self) else { return 0 }
-//
-//        return end - start
-//    }
+    func daysAgoFromNow() -> String {
+        
+        let number = self.intervalUntilNow(ofComponent: .day)
+        
+        return abs(number) == 1 ? "\(number) day" : "\(number) days"
+    }
     
 }

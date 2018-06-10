@@ -67,6 +67,28 @@ class TaskCellTests: XCTestCase {
         
     }
     
+    func testViewModel_WithTwoDaysFromNow_ReturnsTwoDaysAgo() {
+        
+        let dueDate = Date().plus(numberOfDays: 2)
+        let task = Task(title: "Foo", dueDateTimestamp: dueDate.timeIntervalSince1970)
+        
+        let viewModel = TaskCell.ViewModel(task: task)
+        
+        XCTAssertEqual(viewModel.dueDate, "2 days")
+        
+    }
+    
+    func testViewModel_WithOneDayFromNow_ReturnsOneDayAgo() {
+        
+        let dueDate = Date().plus(numberOfDays: 1)
+        let task = Task(title: "Foo", dueDateTimestamp: dueDate.timeIntervalSince1970)
+        
+        let viewModel = TaskCell.ViewModel(task: task)
+        
+        XCTAssertEqual(viewModel.dueDate, "1 day")
+        
+    }
+    
     override func tearDown() {
         
         dataSource = nil
