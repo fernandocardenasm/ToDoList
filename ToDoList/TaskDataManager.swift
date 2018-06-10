@@ -10,10 +10,29 @@ import Foundation
 
 class TaskDataManager {
     private var sections: [Section<Task>] = [
-        Section<Task>(title: "Now", items: [Task(title: "First Task Overdue", dueDateTimestamp: 1532054600), Task(title: "Second Task overdue", dueDateTimestamp: 1532024500)]),
+        Section<Task>(title: "Now", items: [Task(title: "First Task Overdue", dueDateTimestamp: 1532024500), Task(title: "Second Task overdue", dueDateTimestamp: 1532054600)]),
         Section<Task>(title: "Soon", items: [Task(title: "First Task Now", dueDateTimestamp: 1532144700)]),
         Section<Task>(title: "Upcoming", items: [Task(title: "First Task Upcoming", dueDateTimestamp: 1732044800)])
     ]
+    
+    init() {
+        orderByDueDate()
+    }
+    
+    func orderByDueDate(){
+        
+        //Extra variables are needed so we can modify the array, otherwise the elements appear as inmutable.
+        sections = sections.map { section -> Section<Task> in
+            
+            var sectionAux = section
+            var items = section.items
+            items.sort { $0.dueDateTimestamp < $1.dueDateTimestamp }
+//
+            sectionAux.items = items
+            return sectionAux
+            
+        }
+    }
     
     //    private var sections: [Section<Task>] = []
     
@@ -22,7 +41,13 @@ class TaskDataManager {
     }
     
     func add(task: Task, inSection index: Int) {
-        sections[index].items.append(task)
+        
+        sections[index].items.sort {$0.dueDateTimestamp < $1.dueDateTimestamp }
+        
+        let timestamps = sections[index].items.map{ $0.dueDateTimestamp }
+        let indexNewTask = timestamps.insertionIndexOf(elem: task.dueDateTimestamp, isOrderedBefore: { $0 < $1 })
+        
+        sections[index].items.insert(task, at: indexNewTask)
     }
     
     func removeSection(at index: Int) {
@@ -41,11 +66,16 @@ class TaskDataManager {
         sections[index].items.removeAll()
     }
     
-    //It could be improved with a higer order function, but it shows an error that section is inmmutable
     func removeTasksInAllSections() {
-        for index in 0...numberOfSections() - 1{
-            sections[index].items.removeAll()
+        
+        sections = sections.map { section -> Section<Task> in
+            var sectionAux = section
+            
+            sectionAux.items.removeAll()
+            return sectionAux
+            
         }
+
     }
     
     func numberOfSections() -> Int {
