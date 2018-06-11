@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED436DAD20CE6AD400493756 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DAC20CE6AD400493756 /* APIClientTests.swift */; };
-		ED436DB120CE752A00493756 /* APIClientAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB020CE752A00493756 /* APIClientAuthentication.swift */; };
+		ED436DB120CE752A00493756 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB020CE752A00493756 /* APIClient.swift */; };
 		ED436DB320CE765900493756 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB220CE765900493756 /* Token.swift */; };
 		ED436DB520CEA3F800493756 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB420CEA3F800493756 /* User.swift */; };
 		ED436DB720CEA4A400493756 /* PostLogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB620CEA4A400493756 /* PostLogInRequest.swift */; };
@@ -52,7 +52,7 @@
 
 /* Begin PBXFileReference section */
 		ED436DAC20CE6AD400493756 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
-		ED436DB020CE752A00493756 /* APIClientAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientAuthentication.swift; sourceTree = "<group>"; };
+		ED436DB020CE752A00493756 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		ED436DB220CE765900493756 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		ED436DB420CEA3F800493756 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED436DB620CEA4A400493756 /* PostLogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogInRequest.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */,
 				EDD16D6920CBD12900938DB0 /* Extensions.swift */,
 				EDD16D6B20CC3FB900938DB0 /* TaskSection.swift */,
-				ED436DB020CE752A00493756 /* APIClientAuthentication.swift */,
+				ED436DB020CE752A00493756 /* APIClient.swift */,
 				ED436DB220CE765900493756 /* Token.swift */,
 				ED436DB420CEA3F800493756 /* User.swift */,
 				ED436DB620CEA4A400493756 /* PostLogInRequest.swift */,
@@ -282,7 +282,7 @@
 				EDD16D5820C9871700938DB0 /* TaskDataManager.swift in Sources */,
 				ED436DB520CEA3F800493756 /* User.swift in Sources */,
 				ED436DB720CEA4A400493756 /* PostLogInRequest.swift in Sources */,
-				ED436DB120CE752A00493756 /* APIClientAuthentication.swift in Sources */,
+				ED436DB120CE752A00493756 /* APIClient.swift in Sources */,
 				EDD16D5C20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift in Sources */,
 				EDD16D4820C694B200938DB0 /* Task.swift in Sources */,
 				EDD16D6020C98B2A00938DB0 /* TaskCell.swift in Sources */,
