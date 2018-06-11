@@ -103,6 +103,100 @@ class APIClientTests:XCTestCase {
         }
     }
     
+    func testLogIn_WhenJSONIsInvalid_ReturnsError() {
+        
+        //We encode the data that we expect to receive in the response that is a UserLoggedIn
+        
+        mockURLSession = MockURLSession(data: Data(), urlResponse: nil, error: nil)
+        sut.session = mockURLSession
+        
+        let errorExpectation = expectation(description: "Error")
+        
+        //The response for this request is UserLoggedIn
+        var catchedError: Error? = nil
+        
+        sut.loginUser(request: postLogIn, user: userLoggingIn) { (response) in
+            
+            switch response {
+            case .success(let value):
+                print(value)
+                
+            case .failure(let error):
+                print(error)
+                catchedError = error
+                errorExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 1) { _ in
+            XCTAssertNotNil(catchedError)
+        }
+    }
+    
+    func testLogIn_WhenDataIsNil_ReturnsError() {
+        
+        //We encode the data that we expect to receive in the response that is a UserLoggedIn
+        
+        mockURLSession = MockURLSession(data: nil, urlResponse: nil, error: nil)
+        sut.session = mockURLSession
+        
+        let errorExpectation = expectation(description: "Error")
+        
+        //The response for this request is UserLoggedIn
+        var catchedError: Error? = nil
+        
+        sut.loginUser(request: postLogIn, user: userLoggingIn) { (response) in
+            
+            switch response {
+            case .success(let value):
+                print(value)
+                
+            case .failure(let error):
+                print(error)
+                catchedError = error
+                errorExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 1) { _ in
+            XCTAssertNotNil(catchedError)
+        }
+    }
+    
+    func testLogIn_WhenResponseHasError_ReturnsError() {
+        
+        let error = NSError(domain: "SomeError",
+                            code: 1234,
+                            userInfo: nil)
+        
+        //We encode the data that we expect to receive in the response that is a UserLoggedIn
+        
+        mockURLSession = MockURLSession(data: Data(), urlResponse: nil, error: error)
+        sut.session = mockURLSession
+        
+        let errorExpectation = expectation(description: "Error")
+        
+        //The response for this request is UserLoggedIn
+        var catchedError: Error? = nil
+        
+        sut.loginUser(request: postLogIn, user: userLoggingIn) { (response) in
+            
+            switch response {
+            case .success(let value):
+                print(value)
+                
+            case .failure(let error):
+                print(error)
+                catchedError = error
+                errorExpectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 1) { _ in
+            XCTAssertNotNil(catchedError)
+        }
+    }
+    
     override func tearDown() {
         mockURLSession = nil
         sut = nil

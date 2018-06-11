@@ -13,6 +13,7 @@
 		ED436DB520CEA3F800493756 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB420CEA3F800493756 /* User.swift */; };
 		ED436DB720CEA4A400493756 /* PostLogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB620CEA4A400493756 /* PostLogInRequest.swift */; };
 		ED436DB920CEA74400493756 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB820CEA74400493756 /* Result.swift */; };
+		ED436DBB20CF098700493756 /* WebserviceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DBA20CF098700493756 /* WebserviceError.swift */; };
 		EDD16D2620C6943700938DB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D2520C6943700938DB0 /* AppDelegate.swift */; };
 		EDD16D2820C6943700938DB0 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D2720C6943700938DB0 /* TaskTableViewController.swift */; };
 		EDD16D2B20C6943700938DB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD16D2920C6943700938DB0 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		ED436DB420CEA3F800493756 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED436DB620CEA4A400493756 /* PostLogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogInRequest.swift; sourceTree = "<group>"; };
 		ED436DB820CEA74400493756 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		ED436DBA20CF098700493756 /* WebserviceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceError.swift; sourceTree = "<group>"; };
 		EDD16D2220C6943700938DB0 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD16D2520C6943700938DB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD16D2720C6943700938DB0 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				ED436DB420CEA3F800493756 /* User.swift */,
 				ED436DB620CEA4A400493756 /* PostLogInRequest.swift */,
 				ED436DB820CEA74400493756 /* Result.swift */,
+				ED436DBA20CF098700493756 /* WebserviceError.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				EDD16D5A20C9891E00938DB0 /* TaskTableViewAdapter.swift in Sources */,
 				EDD16D6C20CC3FB900938DB0 /* TaskSection.swift in Sources */,
 				EDD16D5E20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift in Sources */,
+				ED436DBB20CF098700493756 /* WebserviceError.swift in Sources */,
 				EDD16D5820C9871700938DB0 /* TaskDataManager.swift in Sources */,
 				ED436DB520CEA3F800493756 /* User.swift in Sources */,
 				ED436DB720CEA4A400493756 /* PostLogInRequest.swift in Sources */,

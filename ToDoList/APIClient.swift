@@ -38,6 +38,9 @@ class APIClient {
             else if let error = error {
                 completion(.failure(error))
             }
+            else {
+                completion(.failure(WebserviceError.DataEmptyError))
+            }
             
         }.resume()
     }
