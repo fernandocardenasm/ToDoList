@@ -14,6 +14,7 @@
 		ED436DB720CEA4A400493756 /* PostLogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB620CEA4A400493756 /* PostLogInRequest.swift */; };
 		ED436DB920CEA74400493756 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB820CEA74400493756 /* Result.swift */; };
 		ED436DBB20CF098700493756 /* WebserviceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DBA20CF098700493756 /* WebserviceError.swift */; };
+		ED436DC320CF1E2400493756 /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DC220CF1E2400493756 /* ToDoListUITests.swift */; };
 		EDD16D2620C6943700938DB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D2520C6943700938DB0 /* AppDelegate.swift */; };
 		EDD16D2820C6943700938DB0 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D2720C6943700938DB0 /* TaskTableViewController.swift */; };
 		EDD16D2B20C6943700938DB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD16D2920C6943700938DB0 /* Main.storyboard */; };
@@ -42,6 +43,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		ED436DC520CF1E2400493756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDD16D1A20C6943700938DB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDD16D2120C6943700938DB0;
+			remoteInfo = ToDoList;
+		};
 		EDD16D3720C6943800938DB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EDD16D1A20C6943700938DB0 /* Project object */;
@@ -59,6 +67,9 @@
 		ED436DB620CEA4A400493756 /* PostLogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogInRequest.swift; sourceTree = "<group>"; };
 		ED436DB820CEA74400493756 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		ED436DBA20CF098700493756 /* WebserviceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceError.swift; sourceTree = "<group>"; };
+		ED436DC020CF1E2400493756 /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED436DC220CF1E2400493756 /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
+		ED436DC420CF1E2400493756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDD16D2220C6943700938DB0 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD16D2520C6943700938DB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD16D2720C6943700938DB0 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +102,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ED436DBD20CF1E2400493756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDD16D1F20C6943700938DB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,11 +126,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED436DC120CF1E2400493756 /* ToDoListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED436DC220CF1E2400493756 /* ToDoListUITests.swift */,
+				ED436DC420CF1E2400493756 /* Info.plist */,
+			);
+			path = ToDoListUITests;
+			sourceTree = "<group>";
+		};
 		EDD16D1920C6943700938DB0 = {
 			isa = PBXGroup;
 			children = (
 				EDD16D2420C6943700938DB0 /* ToDoList */,
 				EDD16D3920C6943800938DB0 /* ToDoListTests */,
+				ED436DC120CF1E2400493756 /* ToDoListUITests */,
 				EDD16D2320C6943700938DB0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,6 +150,7 @@
 			children = (
 				EDD16D2220C6943700938DB0 /* ToDoList.app */,
 				EDD16D3620C6943800938DB0 /* ToDoListTests.xctest */,
+				ED436DC020CF1E2400493756 /* ToDoListUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +206,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ED436DBF20CF1E2400493756 /* ToDoListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED436DC720CF1E2400493756 /* Build configuration list for PBXNativeTarget "ToDoListUITests" */;
+			buildPhases = (
+				ED436DBC20CF1E2400493756 /* Sources */,
+				ED436DBD20CF1E2400493756 /* Frameworks */,
+				ED436DBE20CF1E2400493756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED436DC620CF1E2400493756 /* PBXTargetDependency */,
+			);
+			name = ToDoListUITests;
+			productName = ToDoListUITests;
+			productReference = ED436DC020CF1E2400493756 /* ToDoListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		EDD16D2120C6943700938DB0 /* ToDoList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDD16D3F20C6943800938DB0 /* Build configuration list for PBXNativeTarget "ToDoList" */;
@@ -222,6 +269,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Fernando;
 				TargetAttributes = {
+					ED436DBF20CF1E2400493756 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = EDD16D2120C6943700938DB0;
+					};
 					EDD16D2120C6943700938DB0 = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -246,11 +297,19 @@
 			targets = (
 				EDD16D2120C6943700938DB0 /* ToDoList */,
 				EDD16D3520C6943800938DB0 /* ToDoListTests */,
+				ED436DBF20CF1E2400493756 /* ToDoListUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		ED436DBE20CF1E2400493756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDD16D2020C6943700938DB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,6 +330,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		ED436DBC20CF1E2400493756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED436DC320CF1E2400493756 /* ToDoListUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EDD16D1E20C6943700938DB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +384,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		ED436DC620CF1E2400493756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDD16D2120C6943700938DB0 /* ToDoList */;
+			targetProxy = ED436DC520CF1E2400493756 /* PBXContainerItemProxy */;
+		};
 		EDD16D3820C6943800938DB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EDD16D2120C6943700938DB0 /* ToDoList */;
@@ -344,6 +416,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		ED436DC820CF1E2400493756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ToDoListUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = M.ToDoListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToDoList;
+			};
+			name = Debug;
+		};
+		ED436DC920CF1E2400493756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ToDoListUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = M.ToDoListUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToDoList;
+			};
+			name = Release;
+		};
 		EDD16D3D20C6943800938DB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -535,6 +643,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ED436DC720CF1E2400493756 /* Build configuration list for PBXNativeTarget "ToDoListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED436DC820CF1E2400493756 /* Debug */,
+				ED436DC920CF1E2400493756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EDD16D1D20C6943700938DB0 /* Build configuration list for PBXProject "ToDoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

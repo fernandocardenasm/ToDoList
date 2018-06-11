@@ -39,11 +39,13 @@ class TaskTableViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.navigationItem.rightBarButtonItem)
     }
     
-    func testingLoadingView_IsRightBarButtonSelectorSaveTask() {
+    func testLoadingView_IsRightBarButtonSelectorSaveTask() {
         
         XCTAssertNotNil(sut.navigationItem.rightBarButtonItem?.action)
         XCTAssertEqual(sut.navigationItem.rightBarButtonItem?.action, #selector(sut.presentAddViewController))
+        
     }
+    
     
     func testSaveTask_WithTask_IncreasesTasksInSectionByOne() {
         
