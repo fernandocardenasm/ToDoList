@@ -16,10 +16,10 @@ class TaskDataManager {
     ]
     
     init() {
-        orderByDueDate()
+        orderByDueDateTimestamp()
     }
     
-    func orderByDueDate(){
+    func orderByDueDateTimestamp(){
         
         //Extra variables are needed so we can modify the array, otherwise the elements appear as inmutable.
         sections = sections.map { section -> Section<Task> in

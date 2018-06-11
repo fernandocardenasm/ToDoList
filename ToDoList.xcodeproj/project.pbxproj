@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED436DAD20CE6AD400493756 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DAC20CE6AD400493756 /* APIClientTests.swift */; };
+		ED436DB120CE752A00493756 /* APIClientAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB020CE752A00493756 /* APIClientAuthentication.swift */; };
+		ED436DB320CE765900493756 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB220CE765900493756 /* Token.swift */; };
+		ED436DB520CEA3F800493756 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB420CEA3F800493756 /* User.swift */; };
+		ED436DB720CEA4A400493756 /* PostLogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB620CEA4A400493756 /* PostLogInRequest.swift */; };
+		ED436DB920CEA74400493756 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED436DB820CEA74400493756 /* Result.swift */; };
 		EDD16D2620C6943700938DB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D2520C6943700938DB0 /* AppDelegate.swift */; };
 		EDD16D2820C6943700938DB0 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD16D2720C6943700938DB0 /* TaskTableViewController.swift */; };
 		EDD16D2B20C6943700938DB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDD16D2920C6943700938DB0 /* Main.storyboard */; };
@@ -45,6 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED436DAC20CE6AD400493756 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		ED436DB020CE752A00493756 /* APIClientAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientAuthentication.swift; sourceTree = "<group>"; };
+		ED436DB220CE765900493756 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		ED436DB420CEA3F800493756 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ED436DB620CEA4A400493756 /* PostLogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLogInRequest.swift; sourceTree = "<group>"; };
+		ED436DB820CEA74400493756 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EDD16D2220C6943700938DB0 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD16D2520C6943700938DB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDD16D2720C6943700938DB0 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +143,11 @@
 				EDD16D5F20C98B2A00938DB0 /* TaskCell.swift */,
 				EDD16D6920CBD12900938DB0 /* Extensions.swift */,
 				EDD16D6B20CC3FB900938DB0 /* TaskSection.swift */,
+				ED436DB020CE752A00493756 /* APIClientAuthentication.swift */,
+				ED436DB220CE765900493756 /* Token.swift */,
+				ED436DB420CEA3F800493756 /* User.swift */,
+				ED436DB620CEA4A400493756 /* PostLogInRequest.swift */,
+				ED436DB820CEA74400493756 /* Result.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -149,6 +166,7 @@
 				EDD16D6520CABADC00938DB0 /* AddViewControllerTests.swift */,
 				EDD16D6720CABE9900938DB0 /* AddViewTests.swift */,
 				EDD16D6D20CC5E8000938DB0 /* TaskSectionTests.swift */,
+				ED436DAC20CE6AD400493756 /* APIClientTests.swift */,
 			);
 			path = ToDoListTests;
 			sourceTree = "<group>";
@@ -255,15 +273,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD16D6420CA750A00938DB0 /* AddViewController.swift in Sources */,
+				ED436DB320CE765900493756 /* Token.swift in Sources */,
 				EDD16D5020C7201500938DB0 /* Section.swift in Sources */,
 				EDD16D2820C6943700938DB0 /* TaskTableViewController.swift in Sources */,
 				EDD16D5A20C9891E00938DB0 /* TaskTableViewAdapter.swift in Sources */,
 				EDD16D6C20CC3FB900938DB0 /* TaskSection.swift in Sources */,
 				EDD16D5E20C98B0A00938DB0 /* TaskTableViewAdapterDelegate.swift in Sources */,
 				EDD16D5820C9871700938DB0 /* TaskDataManager.swift in Sources */,
+				ED436DB520CEA3F800493756 /* User.swift in Sources */,
+				ED436DB720CEA4A400493756 /* PostLogInRequest.swift in Sources */,
+				ED436DB120CE752A00493756 /* APIClientAuthentication.swift in Sources */,
 				EDD16D5C20C98ADB00938DB0 /* TaskTableViewAdapterDataSource.swift in Sources */,
 				EDD16D4820C694B200938DB0 /* Task.swift in Sources */,
 				EDD16D6020C98B2A00938DB0 /* TaskCell.swift in Sources */,
+				ED436DB920CEA74400493756 /* Result.swift in Sources */,
 				EDD16D6A20CBD12900938DB0 /* Extensions.swift in Sources */,
 				EDD16D2620C6943700938DB0 /* AppDelegate.swift in Sources */,
 			);
@@ -279,6 +302,7 @@
 				EDD16D6620CABADC00938DB0 /* AddViewControllerTests.swift in Sources */,
 				EDD16D6820CABE9900938DB0 /* AddViewTests.swift in Sources */,
 				EDD16D6220C9B7CC00938DB0 /* TaskCellTests.swift in Sources */,
+				ED436DAD20CE6AD400493756 /* APIClientTests.swift in Sources */,
 				EDD16D4E20C7165900938DB0 /* TaskTableViewControllerTests.swift in Sources */,
 				EDD16D5420C7C72500938DB0 /* TaskTableViewAdapterTests.swift in Sources */,
 				EDD16D5620C7DA7000938DB0 /* TaskDataManagerTests.swift in Sources */,
